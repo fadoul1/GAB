@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tg.esiba.groupe2.gab.admin.gui.controllers.DashboardController">
+   <left>
+      <AnchorPane prefHeight="615.0" prefWidth="239.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-2.0" layoutY="-6.0" prefHeight="731.0" prefWidth="244.0" style="-fx-background-color: #252941;">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" iconName="BANK" size="10em">
+                     <VBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Text fill="#b93636" strokeType="OUTSIDE" strokeWidth="0.0" text="LaBANK" textAlignment="CENTER" wrappingWidth="126.310546875">
+                     <VBox.margin>
+                        <Insets left="50.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0">
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Line>
+                  <HBox prefHeight="40.0" spacing="10.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" iconName="DASHBOARD" size="2em">
+                           <HBox.margin>
+                              <Insets left="20.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label prefHeight="20.0" prefWidth="123.0" text="Acces Principal" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="200.0" prefHeight="40.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="icomptes" fill="WHITE" iconName="EXCHANGE" onMouseClicked="#btnComptesAction" size="2em">
+                           <HBox.margin>
+                              <Insets left="50.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button fx:id="bntComptes" mnemonicParsing="false" onMouseClicked="#btnComptesAction" styleClass="btnComptes" stylesheets="@dashboard.css" text="Comptes" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="240.0" prefHeight="40.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iclients" fill="WHITE" iconName="USERS" onMouseClicked="#btnClientsAction" size="2em">
+                           <HBox.margin>
+                              <Insets left="50.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button fx:id="btnClients" mnemonicParsing="false" onMouseClicked="#btnClientsAction" styleClass="btnClients" stylesheets="@dashboard.css" text="Clients" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="280.0" prefHeight="40.0" spacing="10.0" />
+                  <HBox prefHeight="42.0" prefWidth="244.0" spacing="10.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" iconName="POWER_OFF" size="2em">
+                           <HBox.margin>
+                              <Insets left="20.0" top="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button fx:id="btnDeconnexion" mnemonicParsing="false" onMouseClicked="#btnDeconnexionAction" styleClass="btnDeconnexion" stylesheets="@dashboard.css" text="Déconnexion" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <VBox prefHeight="615.0" prefWidth="736.0" style="-fx-background-color: #A4AFC8;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="178.0" prefWidth="749.0" spacing="40.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="30.0" right="17.0" top="30.0" />
+               </VBox.margin>
+               <children>
+                  <Pane prefHeight="174.0" prefWidth="206.0" style="-fx-background-color: #ffff;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <Label fx:id="nbreClients" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="37.0" prefHeight="69.0" prefWidth="86.0" textFill="#d14043">
+                           <font>
+                              <Font size="47.0" />
+                           </font>
+                        </Label>
+                        <Line endX="80.0" layoutX="110.0" layoutY="119.0" startX="-100.0" stroke="#252941" strokeWidth="3.0" />
+                        <Text fill="#252941" layoutX="51.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clients">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="40.0" layoutY="10.0" prefHeight="174.0" prefWidth="206.0" style="-fx-background-color: #ffff;">
+                     <children>
+                        <Label fx:id="nbreComptes" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="37.0" prefHeight="69.0" prefWidth="86.0" textFill="#d14043">
+                           <font>
+                              <Font size="47.0" />
+                           </font>
+                        </Label>
+                        <Line endX="80.0" layoutX="110.0" layoutY="119.0" startX="-100.0" stroke="#252941" strokeWidth="3.0" />
+                        <Text fill="#252941" layoutX="9.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes Comptes">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="266.0" layoutY="10.0" prefHeight="174.0" prefWidth="206.0" style="-fx-background-color: #ffff;">
+                     <children>
+                        <Label fx:id="nbreAdmins" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="37.0" prefHeight="69.0" prefWidth="86.0" textFill="#d14043">
+                           <font>
+                              <Font size="47.0" />
+                           </font>
+                        </Label>
+                        <Line endX="80.0" layoutX="110.0" layoutY="119.0" startX="-100.0" stroke="#252941" strokeWidth="3.0" />
+                        <Text fill="#252941" layoutX="9.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrateurs">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="437.0" spacing="10.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button fx:id="btnNouveauClient" mnemonicParsing="false" onMouseClicked="#nouveauClient" prefHeight="32.0" prefWidth="127.0" style="-fx-background-color: #DB4346;" text="Nouveau Client" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="15.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="infoClients" mnemonicParsing="false" onMouseClicked="#infoClientsAction" prefHeight="32.0" prefWidth="73.0" style="-fx-background-color: #252941;" text="Infos" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnNouveauCompte" mnemonicParsing="false" onMouseClicked="#nouveauCompte" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: #DB4346;" text="Nouveau Compte" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="28.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="infoComptes" mnemonicParsing="false" onMouseClicked="#infoComptesAction" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #252941;" text="Infos" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="infoAdministrateurs" layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#infoAdministrateursAction" prefHeight="32.0" prefWidth="210.0" style="-fx-background-color: #DB4346;" text="Nombre total des Administrateurs" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="35.0" right="22.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" layoutX="1.0" prefHeight="100.0" prefWidth="716.0" spacing="20.0" style="-fx-background-color: #252941;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="131.0" text="Comptes" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="searchField" alignment="CENTER" prefHeight="27.0" prefWidth="238.0" promptText="Numero du compte à chercher" style="-fx-background-color: transparent; -fx-border-color: #ffff; -fx-border-width: 0px 0px 2px 0px;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnChercher" mnemonicParsing="false" onMouseClicked="#btnChercherAction" style="-fx-background-color: #D14043;" text="Chercher" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="SEARCH" size="2em" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnActualiser" layoutX="572.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#btnActualiserAction" style="-fx-background-color: #D14043;" text="Actualiser" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="REFRESH" size="2em" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ProgressIndicator fx:id="progresRecherche" prefHeight="63.0" prefWidth="41.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="comptesTables" accessibleText="Liste de vos comptes" minWidth="500.0" prefHeight="355.0" prefWidth="589.0" style="-fx-background-color: #DB4346;" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="num" prefWidth="41.0" text="N° " />
+                <TableColumn fx:id="titulaire" prefWidth="199.0" text="Titulaire" />
+                  <TableColumn fx:id="numCompte" prefWidth="189.0" text="Numéro du Compte" />
+                  <TableColumn fx:id="solde" prefWidth="116.0" text="Solde" />
+                  <TableColumn fx:id="date" prefWidth="98.0" text="Créé le" />
+                  <TableColumn fx:id="adminCompte" prefWidth="255.0" text="Administrateur" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="30.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

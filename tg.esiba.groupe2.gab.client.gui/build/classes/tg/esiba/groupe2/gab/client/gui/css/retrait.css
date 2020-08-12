@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.btn:hover{
+    -fx-background-color: white;
+    -fx-border-color:  #252941;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-text-fill : #252941;
+}
+
+.btn{
+    -fx-background-color:  #252941;
+}

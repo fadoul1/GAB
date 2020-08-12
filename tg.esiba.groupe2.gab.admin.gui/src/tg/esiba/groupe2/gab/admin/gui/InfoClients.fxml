@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="infoClient" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tg.esiba.groupe2.gab.admin.gui.controllers.InfoClientsController">
+   <left>
+      <AnchorPane prefHeight="667.0" prefWidth="218.0" style="-fx-background-color: #252941;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="556.0" prefWidth="244.0" style="-fx-background-color: #252941;">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" iconName="BANK" size="10em">
+                     <VBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Text fill="#b93636" strokeType="OUTSIDE" strokeWidth="0.0" text="LaBANK" textAlignment="CENTER" wrappingWidth="126.310546875">
+                     <VBox.margin>
+                        <Insets left="50.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0">
+                     <VBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Line>
+                  <HBox prefHeight="40.0" spacing="10.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" iconName="DASHBOARD" size="2em">
+                           <HBox.margin>
+                              <Insets left="20.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Label prefHeight="25.0" prefWidth="149.0" text="Gestion des Clients" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="200.0" prefHeight="40.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="icomptes" fill="#249a5f" iconName="PLUS_SQUARE" onMouseClicked="#btnNouveauAction" size="2em">
+                           <HBox.margin>
+                              <Insets left="50.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button fx:id="btnNouveau" mnemonicParsing="false" onMouseClicked="#btnNouveauAction" styleClass="btn" stylesheets="@infoclients.css" text="Nouveau" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="240.0" prefHeight="40.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iclients" fill="#00b4eb" iconName="PENCIL_SQUARE" onMouseClicked="#btnModifierAction" size="2em">
+                           <HBox.margin>
+                              <Insets left="50.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button fx:id="btnModifier" mnemonicParsing="false" onMouseClicked="#btnModifierAction" styleClass="btn" stylesheets="@infoclients.css" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="280.0" prefHeight="40.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="iadmins" fill="#e12c2c" iconName="MINUS_SQUARE" onMouseClicked="#btnSupprimerAction" size="2em">
+                           <HBox.margin>
+                              <Insets left="50.0" top="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button fx:id="btnSupprimer" mnemonicParsing="false" onMouseClicked="#btnSupprimerAction" styleClass="btn" stylesheets="@infoclients.css" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #A4AFC8;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="h1" alignment="CENTER" prefHeight="39.0" prefWidth="751.0" style="-fx-background-color: #252941;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="31.0" text="Nom" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="377.0" layoutY="52.0" prefHeight="17.0" prefWidth="90.0" text="Prénom" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="80.0" right="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="391.0" layoutY="52.0" prefHeight="17.0" prefWidth="99.0" text="Adresse" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="404.0" layoutY="52.0" prefHeight="17.0" prefWidth="100.0" text="Téléphone" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label layoutX="418.0" layoutY="52.0" prefHeight="17.0" prefWidth="45.0" text="Mail" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="h2" alignment="CENTER" prefHeight="40.0" prefWidth="721.0" style="-fx-background-color: #252941;">
+               <children>
+                  <TextField fx:id="nomField" promptText="nom" />
+                  <TextField fx:id="prenomField" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="191.0" promptText="Prénom" />
+                  <TextField fx:id="adresseField" layoutX="159.0" layoutY="10.0" prefHeight="25.0" prefWidth="162.0" promptText="Adresse" />
+                  <TextField fx:id="telField" layoutX="308.0" layoutY="10.0" prefHeight="25.0" prefWidth="120.0" promptText="Téléphone" />
+                  <TextField fx:id="mailField" layoutX="457.0" layoutY="10.0" promptText="Mail" />
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="69.0" prefWidth="751.0" spacing="20.0" style="-fx-background-color: #252941;">
+               <children>
+                  <TextField fx:id="searchField" alignment="CENTER" prefHeight="38.0" prefWidth="409.0" style="-fx-border-color: #ffff; -fx-border-width: 0px 0px 2px 0px;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnChercher" mnemonicParsing="false" onMouseClicked="#btnChercherAction" style="-fx-background-color: #D14043;" text="Chercher" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="SEARCH" size="2em" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnActualiser" layoutX="572.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#btnActualiserAction" style="-fx-background-color: #D14043;" text="Actualiser" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" iconName="REFRESH" size="2em" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ProgressIndicator fx:id="progresRecherche" prefHeight="63.0" prefWidth="41.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="clientTables" accessibleText="Liste de vos comptes" minWidth="400.0" onMouseClicked="#clientTablesAction" prefHeight="362.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="num" prefWidth="41.0" text="N° " />
+                  <TableColumn fx:id="nom" prefWidth="160.0" text="Nom" />
+                  <TableColumn fx:id="prenom" prefWidth="192.0" text="Prénoms" />
+                  <TableColumn fx:id="sexe" prefWidth="98.0" text="sexe" />
+                  <TableColumn fx:id="tel" prefWidth="98.0" text="Téléphone" />
+                  <TableColumn fx:id="email" prefWidth="98.0" text="Mail" />
+                  <TableColumn fx:id="add" prefWidth="152.0" text="Adresse" />
+                  <TableColumn fx:id="passe" prefWidth="192.0" text="passe" />
+               </columns>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

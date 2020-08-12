@@ -1,0 +1,48 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.btnComptes:hover{
+    -fx-background-color: #DB4346;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.btnAdmins{
+    -fx-background-color: transparent;
+}
+
+.btnClients{
+    -fx-background-color: transparent;
+}
+
+.btnComptes{
+    -fx-background-color: transparent;
+}
+
+.btnDeconnexion{
+    -fx-background-color: transparent;
+}
+
+
+.btnClients:hover{
+    -fx-background-color: #DB4346;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.btnAdmins:hover{
+    -fx-background-color: #DB4346;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
+
+.btnDeconnexion:hover{
+    -fx-background-color: #DB4346;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+}
